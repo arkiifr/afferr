@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Affer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5B21B6;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --bg: #0F172A;
+            --bg-sec: #1E293B;
+            --code-bg: #0d1117;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 300px;
+            height: 100vh;
+            background: var(--bg-sec);
+            padding: 2rem;
+            position: fixed;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: rgba(91, 33, 182, 0.2);
+            color: white;
+        }
+
+        .section-header {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #64748b;
+            margin: 1.5rem 0 0.5rem;
+            font-weight: 700;
+        }
+
+        /* Content */
+        .content {
+            margin-left: 300px;
+            padding: 4rem 6rem;
+            max-width: 900px;
+        }
+
+        h1 {
+            font-family: 'Outfit';
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-family: 'Outfit';
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #e2e8f0;
+        }
+
+        pre {
+            background: var(--code-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: #a5d6ff;
+        }
+
+        .note {
+            background: rgba(91, 33, 182, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+        }
+
+        .note h4 {
+            margin: 0 0 0.5rem;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sidebar">
+        <a href="index.html" class="logo"><i class="fas fa-layer-group"></i> Affer Docs</a>
+
+        <div class="section-header">Getting Started</div>
+        <ul>
+            <li><a href="#" class="active">Introduction</a></li>
+            <li><a href="#">Installation</a></li>
+            <li><a href="#">Folder Structure</a></li>
+        </ul>
+
+        <div class="section-header">Components</div>
+        <ul>
+            <li><a href="#">Navbar</a></li>
+            <li><a href="#">Hero Section</a></li>
+            <li><a href="#">Cards</a></li>
+            <li><a href="#">Footer</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>Introduction</h1>
+        <p>Welcome to the official Affer documentation. Our templates are designed to be easy to customize,
+            high-performance, and SEO-optimized out of the box.</p>
+
+        <div class="note">
+            <h4>Quick Start</h4>
+            <p style="margin-bottom: 0;">Ensure you have Node.js installed if you are using the Next.js or React
+                versions of our templates.</p>
+        </div>
+
+        <h2>Installation</h2>
+        <p>After purchasing a template, unzip the package and navigate to the project folder:</p>
+        <pre><code>cd project-name
+npm install
+npm run dev</code></pre>
+
+        <h2>Theme Configuration</h2>
+        <p>You can customize the global colors and fonts in the <code>style.css</code> file or
+            <code>tailwind.config.js</code> depending on the template.</p>
+        <pre><code>:root {
+  --primary: #5B21B6;
+  --accent: #EC4899;
+}</code></pre>
+    </main>
+</body>
+
+</html>
