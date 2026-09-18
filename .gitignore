@@ -1,0 +1,12 @@
+# local build and runtime state
+affer
+affer.exe
+*.db
+*.db-shm
+*.db-wal
+.affer-apply.patch
+*.affer.tmp
+
+# Go tooling
+/bin/
+/vendor/
